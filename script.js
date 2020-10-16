@@ -13,7 +13,9 @@ var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 
 var alpha2 = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-var choice;
+var choices;
+
+var password;
 
 var generateBtn = document.querySelector("#generate");
 
@@ -32,10 +34,12 @@ function generatePassword() {
   var enter = prompt("How many characters do you need? Select between 8 and 128"); 
 
   if (!enter) {
-    alert("This needs a value");
+    enter = prompt("This needs a value");
+    parseInt(enter);
   }
   else if (enter < 8 || enter > 128) {
     enter = prompt("You must choose a number between 8 and 128");
+    parseInt(enter);
   }
   else {
     confirmNumber = confirm("Will you be using numbers?"); 
@@ -92,13 +96,14 @@ else if (confirmLowercase) {
  }
 else if (confirmUppercase) {
     choices = alpha2;
- }; 
 };
 
 var password =[];
 
 for (var i =0; i < enter; i++) {
-  var pickChoices = choices[Math.floor(Math.random() * choices.length)];
- //gives a value in the array//
- console.log(pickChoices);
+  var randChoices = choices[Math.floor(Math.random() * choices.length)];
+ password.push(randChoices);
 }
+
+}
+
