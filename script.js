@@ -104,6 +104,6 @@ for (var i =0; i < enter; i++) {
  password.push(randChoices);
  
 }
-console.log(password.join(''));
+return password.join('');
 }
 
