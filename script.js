@@ -15,15 +15,16 @@ var alpha2 = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "
 
 var choices;
 
-var password;
+var password =[];
 
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.getElementById("#password");
   passwordText.value = password;
+  
 }
 
 // Add event listener to generate button
@@ -98,13 +99,11 @@ else if (confirmUppercase) {
     choices = alpha2;
 };
 
-var password =[];
-
 for (var i =0; i < enter; i++) {
  var randChoices = choices[Math.floor(Math.random() * choices.length)];
  password.push(randChoices);
- console.log(randChoices);
+ 
 }
-
+console.log(password.join(''));
 }
 
