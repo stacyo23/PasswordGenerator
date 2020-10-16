@@ -101,8 +101,9 @@ else if (confirmUppercase) {
 var password =[];
 
 for (var i =0; i < enter; i++) {
-  var randChoices = choices[Math.floor(Math.random() * choices.length)];
+ var randChoices = choices[Math.floor(Math.random() * choices.length)];
  password.push(randChoices);
+ console.log(randChoices);
 }
 
 }
