@@ -37,8 +37,9 @@ function generatePassword() {
 
  if (enter < 8) {
    alert("The password must be at least 8 characters.")
-   return; 
+   return;
  }
+
    if (enter > 128) {
     alert("The password must be less than 129 characters");
     return;
