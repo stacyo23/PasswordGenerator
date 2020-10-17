@@ -40,7 +40,7 @@
 
 ### Deployed Site
 
-* https://stacyo23.github.io/PasswordGenerator/
+* https://stacyo23.github.io/PasswordGenerator/index.html
 
 ### Github Page
 
